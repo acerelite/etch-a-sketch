@@ -1,7 +1,7 @@
 function drawGrid(size = 16) {
 
   clearGrid();
-  
+
   let gridRow = document.createElement("div");
 
   for (let row = 0; row < size; row++) {
@@ -31,7 +31,17 @@ function clearGrid() {
 }
 
 function fillPanel() {
-  this.style.backgroundColor = "black";
+  // var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  // this.style.backgroundColor = '#' + randomColor;
+
+  if(!this.style.backgroundColor) {
+    this.style.backgroundColor = 'rgb(230, 230, 230)';
+  } else {
+    let val = this.style.backgroundColor.toString()
+      .slice(4, this.style.backgroundColor.toString().length - 1).split(', ');
+    this.style.backgroundColor = `rgb(${val[0] - 26}, ${val[0] - 26},
+      ${val[0] - 26})`;
+  }
 }
 
 function setGridSize() {
