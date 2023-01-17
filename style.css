@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.gridRow {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.gridRow div {
+  flex: 1;
+}
+
+button {
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
